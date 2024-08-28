@@ -56,5 +56,3 @@ def webhook():
         flash(f'Erro ao processar o webhook: {e}', 'danger')
         return render_template('index.html'), 500
 
-if __name__ == '__main__':
-    app.run(debug=True)
