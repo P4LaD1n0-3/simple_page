@@ -19,7 +19,7 @@ def verify_webhook():
             return challenge, 200
         else:
             return 'Verificação falhou', 403
-        
+
 
 
 @app.route('/webhook', methods=['POST'])
@@ -39,6 +39,6 @@ def webhook():
                     # Exibe a mensagem no site
                     flash(f'Mensagem recebida de {sender_id}: {message_body}', 'success')
                     print(f"Mensagem recebida de {sender_id}: {message_body}")
-                    
+
     return jsonify({"status": "mensagem recebida"}), 200
 
